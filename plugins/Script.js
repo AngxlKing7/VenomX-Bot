@@ -17,7 +17,7 @@ let handler = async (m, { conn, __dirname }) => {
 👑 *Comandos exclusivos para Moderadores*
 
 ╭━━⊷ *comandos medios* ⊶━━╮
-┃ 💠 *#addllama* - Añadir llamas a un usuario.
+┃ 💠 *#addllama* - Añadir coins a un usuario.
 ┃ 💠 *#userpremium* - Otorgar premium a un usuario.
 ┃ 💠 *#delprem* - Quitar premium a un usuario.
 ┃ 💠 *#addexp* - Añadir XP a un usuario.

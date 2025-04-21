@@ -23,8 +23,8 @@ generando imagen de *${prompt}*`, m, rcanal);
     }
 };
 
-handler.command = ['imgg', 'kiritoia'];
-handler.help = ['imgg <descripción>', 'kiritoia <descripción>'];
+handler.command = ['imgg', 'VenomXia'];
+handler.help = ['imgg <descripción>', 'VenomX ia <descripción>'];
 handler.tags = ['tools'];
 
 export default handler;

@@ -55,33 +55,33 @@ setTimeout(resolve, 1000)
 }
 let timestamp = speed()
 let latensi = speed() - timestamp
-let kirito = `╭─⬣「 *Info De ${botname}* 」⬣\n`
-kirito += `│ 👑 *Creador* : @${owner[0][0].split('@s.whatsapp.net')[0]}\n`
-kirito += `│ ${emoji} *Prefijo* : [  ${usedPrefix}  ]\n`
-kirito += `│ 📦 *Total Plugins* : ${totalf}\n`
-kirito += `│ 🖥️ *Plataforma* : ${platform()}\n`
-kirito += `│ 📡 *Servidor* : ${hostname()}\n`
-kirito += `│ 📈 *RAM* : ${format(totalmem() - freemem())} / ${format(totalmem())}\n`
-kirito += `│ 💾 *FreeRAM* : ${format(freemem())}\n`
-kirito += `│ 🚀 *Speed* : ${latensi.toFixed(4)} ms\n`
-kirito += `│ 🕗 *Uptime* : ${uptime}\n`
-kirito += `│ 🔮 *Modo* : ${bot.public ? 'Privado' : 'Publico'}\n`
-kirito += `│ 📜 *Comandos Ejecutados* : ${toNum(totalStats)} ( *${totalStats}* )\n`
-kirito += `│ 📍 *Grupos Registrados* : ${toNum(totalchats)} ( *${totalchats}* )\n`
-kirito += `│ 📌 *Registrados* : ${toNum(totalreg)} ( *${totalreg}* ) Usuarios\n`
-kirito += `╰─⬣\n\n`
-kirito += `╭─⬣「 *Chats De ${botname}* 」⬣\n`
-kirito += `│ 🪧 *${groupsIn.length}* Chats en Grupos\n`
-kirito += `│ 📰 *${groupsIn.length}* Grupos Unidos\n`
-kirito += `│ 📄 *${groupsIn.length - groupsIn.length}* Grupos Salidos\n`
-kirito += `│ 💬 *${chats.length - groupsIn.length}* Chats Privados\n`
-kirito += `│ 💭 *${chats.length}* Chats Totales\n`
-kirito += `╰─⬣\n\n`
-kirito += `╭─⬣「 *NodeJS Uso de memoria* 」⬣\n`
-kirito += `${'```' + Object.keys(used).map((key, _, arr) => `${key.padEnd(Math.max(...arr.map(v => v.length)), ' ')}: ${format(used[key])}`).join('\n') + '```'}\n`
-kirito += `╰─⬣`
+let VenomX = `╭─⬣「 *Info De ${botname}* 」⬣\n`
+VenomX += `│ 👑 *Creador* : @${owner[0][0].split('@s.whatsapp.net')[0]}\n`
+VenomX += `│ ${emoji} *Prefijo* : [  ${usedPrefix}  ]\n`
+VenomX += `│ 📦 *Total Plugins* : ${totalf}\n`
+VenomX += `│ 🖥️ *Plataforma* : ${platform()}\n`
+VenomX += `│ 📡 *Servidor* : ${hostname()}\n`
+VenomX += `│ 📈 *RAM* : ${format(totalmem() - freemem())} / ${format(totalmem())}\n`
+VenomX += `│ 💾 *FreeRAM* : ${format(freemem())}\n`
+VenomX += `│ 🚀 *Speed* : ${latensi.toFixed(4)} ms\n`
+VenomX += `│ 🕗 *Uptime* : ${uptime}\n`
+VenomX += `│ 🔮 *Modo* : ${bot.public ? 'Privado' : 'Publico'}\n`
+VenomX += `│ 📜 *Comandos Ejecutados* : ${toNum(totalStats)} ( *${totalStats}* )\n`
+VenomX += `│ 📍 *Grupos Registrados* : ${toNum(totalchats)} ( *${totalchats}* )\n`
+VenomX += `│ 📌 *Registrados* : ${toNum(totalreg)} ( *${totalreg}* ) Usuarios\n`
+VenomX += `╰─⬣\n\n`
+VenomX += `╭─⬣「 *Chats De ${botname}* 」⬣\n`
+VenomX += `│ 🪧 *${groupsIn.length}* Chats en Grupos\n`
+VenomX += `│ 📰 *${groupsIn.length}* Grupos Unidos\n`
+VenomX += `│ 📄 *${groupsIn.length - groupsIn.length}* Grupos Salidos\n`
+VenomX += `│ 💬 *${chats.length - groupsIn.length}* Chats Privados\n`
+VenomX += `│ 💭 *${chats.length}* Chats Totales\n`
+VenomX += `╰─⬣\n\n`
+VenomX += `╭─⬣「 *NodeJS Uso de memoria* 」⬣\n`
+VenomX += `${'```' + Object.keys(used).map((key, _, arr) => `${key.padEnd(Math.max(...arr.map(v => v.length)), ' ')}: ${format(used[key])}`).join('\n') + '```'}\n`
+VenomX += `╰─⬣`
 
-await conn.reply(m.chat, kirito, fkontak, { contextInfo: { mentionedJid: [owner[0][0] + '@s.whatsapp.net'] }})
+await conn.reply(m.chat, VenomX, fkontak, { contextInfo: { mentionedJid: [owner[0][0] + '@s.whatsapp.net'] }})
 }
 handler.help = ['infobot']
 handler.tags = ['info']
