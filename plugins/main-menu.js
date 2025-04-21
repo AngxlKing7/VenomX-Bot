@@ -40,7 +40,7 @@ let tags = {
 let handler = async (m, { conn, usedPrefix: _p }) => {
   try {
     let userId = m.sender;
-    let botname = conn.user.name || "Kirito-Bot";
+    let botname = conn.user.name || "VenomX-Bot";
     let mode = global.opts["self"] ? "Privado" : "Público";
     let totalCommands = Object.keys(global.plugins).length;
     let totalreg = Object.keys(global.db.data.users).length;
@@ -64,12 +64,11 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
     let menuText = `
 *⌬━━━━▣━━◤👑◢━━▣━━━━━⌬*
 
-Hola *@${userId.split('@')[0]}* soy *𝐊𝐢𝐫𝐢𝐭𝐨-𝐁𝐨𝐭 𝐌𝐃☆*
+Hola *@${userId.split('@')[0]}* soy *𝐕𝐞𝐧𝐨𝐦𝐗-𝐁𝐨𝐭 🜲*
 
 ╔══════⌬『 ✨ 𝑰 𝑵 𝑭 𝑶 ✨』
 ║ ✎ *Cliente:* @${userId.split('@')[0]}
-║ ✎ *Bot:* ${(conn.user.jid == global.conn.user.jid ? 'Principal 🅥' : 'Prem Bot 🅑')}
-║ ✎ *Modo:* ${mode}
+║ ✎ *Bot:* ${(conn.user.jid == global.conn.user.jid ? 'Principal ༯' : 'Prem Bot')}║ ✎ *Modo:* ${mode}
 ║ ✎ *Usuarios »* ${totalreg}
 ║ ✎ *Tiempo Activo:* ${uptime}
 ║ ✎ *Comandos »* ${totalCommands}
@@ -82,19 +81,19 @@ ${Object.keys(tags).map(tag => {
   const commandsForTag = help.filter(menu => menu.tags.includes(tag));
   if (commandsForTag.length === 0) return ''; 
   return `*┏━━━━▣━━⌬〘 ${tags[tag]} ${getRandomEmoji()} 〙*
-${commandsForTag.map(menu => menu.help.map(help => `∫➤ ${_p}${help} ${menu.limit ? '◜⭐◞' : ''} ${menu.premium ? '◜🪪◞' : ''}`).join('\n')).join('\n')}
+${commandsForTag.map(menu => menu.help.map(help => `┃» ${_p}${help} ${menu.limit ? '◜⭐◞' : ''} ${menu.premium ? '◜🪪◞' : ''}`).join('\n')).join('\n')}
 *┗━━━▣━━⌬⌨⌬━━▣━━━━⌬*`
 }).filter(text => text !== '').join('\n')}
 
-> © *Powered by Deylin*
+> © *Powered by AngxlKing*
 `;
 
     // no tocar 
     const imageUrls = [
-                  'https://files.catbox.moe/xkx49e.jpg',
-'https://files.catbox.moe/qgg4nl.jpg',
-'https://files.catbox.moe/bp6vau.jpg',
-'https://files.catbox.moe/uz27gi.jpg'
+                  'https://files.catbox.moe/ebr65k.jpg',
+'https://files.catbox.moe/6hrur2.jpg',
+'https://files.catbox.moe/vgdxmv.jpg',
+'https://files.catbox.moe/hg6yub.jpg'
     ];
     let selectedImage = imageUrls[Math.floor(Math.random() * imageUrls.length)];
 
@@ -112,8 +111,8 @@ ${commandsForTag.map(menu => menu.help.map(help => `∫➤ ${_p}${help} ${menu.l
 
 handler.help = ['menu', 'allmenu'];
 handler.tags = ['main'];
-handler.command = ['menu', 'allmenu', 'menú'];
-handler.register = true;
+handler.command = ['menu', 'allmenu', 'menú', 'help'];
+handler.register = false;
 
 export default handler;
 
@@ -128,7 +127,7 @@ function clockString(ms) {
 }
 
 function getRandomEmoji() {
-  const emojis = ['👑', '🔥', '🌟', '⚡'];
+  const emojis = ['👑', '🦇', '🌟', '⚡'];
   return emojis[Math.floor(Math.random() * emojis.length)];
 }
 
