@@ -100,6 +100,10 @@ global.taguser = '@' + m.sender.split("@s.whatsapp.net")
 var more = String.fromCharCode(8206)
 global.readMore = more.repeat(850)
 
+global.packsticker = `┊ Speed3xz Team\n⤷ https://ayrton.bot.nu/\n\n┊INFO 👹\n ⤷ ayrton.bot.nu/discord `;
+global.packsticker2 = `• ┊Bot 👑\n┊⤷${botname} \n\n┊Usuario:\n┊⤷${nombre}`
+
+
 //Fakes
 let pp = null; try { pp = await conn.profilePictureUrl('525665619261@s.whatsapp.net', 'image') } catch (e) { pp = null } global.fkontak = { key: {participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: `120363416711925079@g.us` } : {}) }, message: { 'contactMessage': { 'displayName': `Angel creador`, 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;Deylin creador,;;;\nFN:Deylin creador\nitem1.TEL;waid=525665619261:525665619261\nitem1.X-ABLabel:Ponsel\nEND:VCARD`, 'jpegThumbnail': pp ? await (await fetch(pp)).buffer() : null, thumbnail: null, sendEphemeral: true }}}
 
