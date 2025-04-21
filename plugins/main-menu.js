@@ -68,7 +68,7 @@ Hola *@${userId.split('@')[0]}* soy *𝐕𝐞𝐧𝐨𝐦𝐗-𝐁𝐨𝐭 🜲*
 
 ╔══════⌬『 ✨ 𝑰 𝑵 𝑭 𝑶 ✨』
 ║ ✎ *Cliente:* @${userId.split('@')[0]}
-║ ✎ *Bot:* ${(conn.user.jid == global.conn.user.jid ? 'Principal ༯' : 'Prem Bot')}
+║ ✎ *Bot:* ${(conn.user.jid == global.conn.user.jid ? 'Principal' : 'Prem Bot')}
 ║ ✎ *Modo:* ${mode}
 ║ ✎ *Usuarios »* ${totalreg}
 ║ ✎ *Tiempo Activo:* ${uptime}
