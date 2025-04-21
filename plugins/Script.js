@@ -11,108 +11,62 @@ let handler = async (m, { conn, __dirname }) => {
     let leerMas = '\u200e'.repeat(850)
 
     let menuText = `
-*𝐇𝐨𝐥𝐚! 𝐒𝐨𝐲 𝐀𝐲𝐫𝐭𝐨𝐧 - 𝐁𝐨𝐭*
-╭─┈↷
-│ ✐ 𝐃𝐞𝐬𝐚𝐫𝐫𝐨𝐥𝐥𝐚𝐝𝐨 𝐩𝐨𝐫 𝐀𝐧𝐠𝐱𝐥𝐊𝐢𝐧𝐠𝟕
-│ ➥ Tiempo activo: *${muptime}*
-│ ✐ ꒷ꕤ💎 ᴄᴀɴᴀʟ ᴏғɪᴄɪᴀʟ:
-│ https://whatsapp.com/channel/0029VbAmwbQBqbr587Zkni1a
-╰─────────────────
-${leerMas}
-》───「 𝗖𝗢𝗠𝗔𝗡𝗗𝗢𝗦 」───《
+┏━━━━━━━━━━⬣
+┃ ✦ 𝐎𝐖𝐍𝐄𝐑𝐒 ✦
+┗━━━━━━━━━━⬣
+👑 *Comandos exclusivos para Moderadores*
 
-❀ ᥴ᥆mᥲᥒძ᥆s ძᥱ m᥆ძᥱrᥲᥴіóᥒ ᥡ ᥴ᥆ᥒ𝗍r᥆ᥣ ᥲ᥎ᥲᥒzᥲძ᥆ ⍴ᥲrᥲ ᥆ᥕᥒᥱrs.
-ᰔᩚ *#addowner • #delowner*
-> ✦ Agrega o elimina un número de la lista de owners.
-ᰔᩚ *#codigo*
-> ✦ Crea un token o código de canjeó de códigos.
-ᰔᩚ *#backup • #copia*
-> ✦ Crear un respaldo de seguridad de la *db* del Bot.
-ᰔᩚ *#bcgc*
-> ✦ Envia un mensaje a todos los grupos donde este el Bot.
-ᰔᩚ *#cleanfiles*
-> ✦ Elimina archivos temporales.
-ᰔᩚ *#addcoins • #añadircoin*
-> ✦ Añade coins a un usuario.
-ᰔᩚ *#userpremium • #addprem*
-> ✦ Otorgar premium a un usuario.
-ᰔᩚ *#delprem #remove*
-> ✦ Quitar premium a un usuario.
-ᰔᩚ *#addexp • #añadirxp*
-> ✦ Añade XP a un usuario.
-ᰔᩚ *#autoadmin*
-> ✦ El Bot dara admin automáticamente solo si el Bot es admin.
-ᰔᩚ *#listban • #banlist*
-> ✦ Lista de usuarios y chats baneados.
-ᰔᩚ *#banuser*
-> ✦ Banear a un usuario.
-ᰔᩚ *#unbanuser*
-> ✦ Desbanear a un usuario.
-ᰔᩚ *#dsowner • #delai*
-> ✦ Elimina archivos innecesarios de sesión.
-ᰔᩚ *#cleartmp • #vaciartmp*
-> ✦ Elimina archivo innecesarios de la carpeta tmp.
-ᰔᩚ *#block • #unblock*
-> ✦ Bloquear o desbloquear a un usuario del número del Bot.
-ᰔᩚ *#listblock • #blocklist*
-> ✦ Ver listado de usuarios bloqueados.
-ᰔᩚ *#removecoin • #quitarcoin*
-> ✦ Quitar coins a un usuario.
-ᰔᩚ *#deletedatauser • #resetuser*
-> ✦ Restablecer los datos de un usuario.
-ᰔᩚ *#removexp • #quitarxp*
-> ✦ Quitar XP a un usuario.
-ᰔᩚ *#newgc #creargc*
-> ✦ Crea un nuevo grupo desde el número del Bot.
-ᰔᩚ *#deletefile*
-> ✦ Elimina archivos del Bot
-ᰔᩚ *#get • #fetch*
-> ✦ Ver el estado de una página web.
-ᰔᩚ *#plugin • #getplugin*
-> ✦ Extraer un plugin de los archivos del Bot.
-ᰔᩚ *#grouplist • #listgroup*
-> ✦ Ver listado de grupos en los que está unido el Bot.
-ᰔᩚ *#join • #invite*
-> ✦ Agregar el Bot a un grupo mediante el enlace de invitación.
-ᰔᩚ *#leave • #salir*
-> ✦ Sacar el Bot de un grupo.
-ᰔᩚ *#let*
-> ✦ Envia un mensaje con una duración de 1 hora.
-ᰔᩚ *#prefix*
-> ✦ Ver o cambiar el prefijo del Bot.
-ᰔᩚ *#resetprefix*
-> ✦ Restablecer el prefijo del Bot.
-ᰔᩚ *#reiniciar • #restart*
-> ✦ Reiniciar el servidor del Bot.
-ᰔᩚ *#reunion • #meeting*
-> ✦ Envia un aviso de reunión a los owners.
-ᰔᩚ *#savejs • #savefile*
-> ✦ Guarda un archivo en una de las rutas del Bot.
-ᰔᩚ *#saveplugin*
-> ✦ Guarda un plugin en la carpeta de comandos del Bot.
-ᰔᩚ *#setbanner*
-> ✦ Cambia la imagen del menu principal del Bot.
-ᰔᩚ *#setavatar*
-> ✦ Cambia la imagen del catálogo.
-ᰔᩚ *#addcmd • #setcmd*
-> ✦ Guarda un sticker/imagen como texto o comando.
-ᰔᩚ *#delcmd*
-> ✦ Elimina el texto/comando del Bot.
-ᰔᩚ *#cmdlist • #listcmd*
-> ✦ Ver listado de textos/comandos.
-ᰔᩚ *#setimage • #setpfp*
-> ✦ Cambia la foto del perfil del Bot.
-ᰔᩚ *#setmoneda*
-> ✦ Cambia la moneda del Bot.
-ᰔᩚ *#setname*
-> ✦ Cambia el nombre del Bot
-ᰔᩚ *#setbio • #setstatus*
-> ✦ Cambia la biografía del Bot.
-ᰔᩚ *#update*
-> ✦ Actualiza el Bot a la versión más reciente de GitHub.
+╭━━⊷ *comandos medios* ⊶━━╮
+┃ 💠 *#addllama* - Añadir llamas a un usuario.
+┃ 💠 *#userpremium* - Otorgar premium a un usuario.
+┃ 💠 *#delprem* - Quitar premium a un usuario.
+┃ 💠 *#addexp* - Añadir XP a un usuario.
+┃ 💠 *#autoadmin* - Admin automático si el bot es admin.
+┃ 💠 *#listban* - Ver lista de baneados.
+┃ 💠 *#banuser* - Banear a un usuario.
+┃ 💠 *#unbanuser* - Desbanear a un usuario.
+┃ 💠 *#block* / *#unblock* - Bloquear o desbloquear usuario.
+┃ 💠 *#listblock* - Ver usuarios bloqueados.
+┃ 💠 *#removellama* - Quitar llamás a un usuario.
+┃ 💠 *#removexp* - Quitar XP a un usuario.
+┃ 💠 *#deletedatauser* - Restablecer datos de usuario.
+┃ 💠 *#cleartmp* - Limpiar archivos temporales.
+┃ 💠 *#dsowner* - Eliminar archivos innecesarios de sesión.
+╰━━━━━━━━━━━━━╯
+
+╭━⊷ *comandos avanzados* ⊶━╮
+┃ 🔥 *#addowner* / *#delowner* - Agregar o eliminar owner.
+┃ 🔥 *#codigo* - Crear código de canjeo.
+┃ 🔥 *#backup* - Respaldo de la DB del bot.
+┃ 🔥 *#bcgc* - Mensaje a todos los grupos.
+┃ 🔥 *#cleanfiles* - Eliminar archivos temporales.
+┃ 🔥 *#newgc* - Crear un grupo con el bot.
+┃ 🔥 *#deletefile* - Eliminar archivos del bot.
+┃ 🔥 *#get* - Ver estado de una página web.
+┃ 🔥 *#plugin* - Extraer un plugin del bot.
+┃ 🔥 *#grouplist* - Ver grupos donde está el bot.
+┃ 🔥 *#join* - Unir al bot a un grupo.
+┃ 🔥 *#leave* - Sacar al bot de un grupo.
+┃ 🔥 *#prefix* - Ver o cambiar prefijo del bot.
+┃ 🔥 *#resetprefix* - Restablecer prefijo del bot.
+┃ 🔥 *#reiniciar* - Reiniciar el servidor del bot.
+┃ 🔥 *#reunion* - Aviso de reunión a los owners.
+┃ 🔥 *#savejs* / *#saveplugin* - Guardar archivos en el bot.
+┃ 🔥 *#setbanner* - Cambiar imagen del menú.
+┃ 🔥 *#setcatalogo* - Cambiar imagen del catálogo.
+┃ 🔥 *#addcmd* / *#delcmd* - Guardar o eliminar comandos personalizados.
+┃ 🔥 *#cmdlist* - Ver lista de comandos guardados.
+┃ 🔥 *#setimage* - Cambiar foto de perfil del bot.
+┃ 🔥 *#setmoneda* - Cambiar la moneda del bot.
+┃ 🔥 *#setname* - Cambiar nombre del bot.
+┃ 🔥 *#setbio* - Cambiar biografía del bot.
+┃ 🔥 *#update* - Actualizar bot desde GitHub.
+╰━━━━━━━━━━━━━╯
+
+💾 *VenomX-Bot* ⚔️ - Administración y control avanzado.
 `.trim()
 
-    let pp = 'https://files.catbox.moe/fbwswj.jpg'
+    let pp = 'https://files.catbox.moe/ebr65k.jpg'
     await conn.sendFile(m.chat, pp, 'thumbnail.jpg', menuText, m)
 
   } catch (e) {

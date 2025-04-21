@@ -100,8 +100,20 @@ global.taguser = '@' + m.sender.split("@s.whatsapp.net")
 var more = String.fromCharCode(8206)
 global.readMore = more.repeat(850)
 
-global.packsticker = `┊ Speed3xz Team\n⤷ https://ayrton.bot.nu/\n\n┊INFO 👹\n ⤷ ayrton.bot.nu/discord `;
-global.packsticker2 = `• ┊Bot 👑\n┊⤷${botname} \n\n┊Usuario:\n┊⤷${nombre}`
+global.packsticker = `╭─『 Speed3xz Team 🕷️』
+│⤷ Made By AngxlKing7
+│
+│ owner 👑
+│⤷ +52 56 6561 9261
+╰───────────────⸼`;
+
+global.packsticker2 = `\n\n╭─『 BOT 👑 』 
+│⤷ ${botname}
+│
+│USUARIO 🧑‍💻
+│⤷ ${nombre}
+╰───────────────⸼`;
+
 
 
 //Fakes
