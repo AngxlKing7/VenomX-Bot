@@ -1,6 +1,6 @@
-<h1 align="center">✦ Ayrton - Bot ✦</h1>
+<h1 align="center">✦ VenomX-Bot ✦</h1>
 
- <img src= "https://files.catbox.moe/j0ftmj.jpg">
+ <img src= "https://files.catbox.moe/ebr65k.jpg">
     </p>
 
 ### **`❕️ Información importante`**
@@ -55,7 +55,7 @@ apt update && apt upgrade && pkg install -y git nodejs ffmpeg imagemagick yarn
 ```
 
 ```bash
-git clone https://github.com/Angxlking7/Ayrton-Bot && cd Ayrton-Bot
+git clone https://github.com/Angxlking7/VenomX-Bot && cd VenomX-Bot
 ```
 
 ```bash
@@ -111,7 +111,7 @@ npm start
 
 ### **`🔗 CODESPACES`**
 
-[`CREAR SERVIDOR`](https://github.com/codespaces/new?skip_quickstart=true&machine=standardLinux32gb&repo=960972213&ref=master&geo=UsWest)
+[`CREAR SERVIDOR`](https://github.com/codespaces/new/AngxlKing7/VenomX-Bot)
 
 ---
 ### **`🔗 Enlaces útiles`**
@@ -130,10 +130,6 @@ npm start
 * Correo: [`Aquí`](angelcortes7x@gmail.com)
 
 </details>  
-
-### **`👑 Bot original`**
-<a
-href="https://github.com/The-King-Destroy"><img src="https://github.com/The-King-Destroy.png" width="50" height="50" alt="The-King-Destroy"/></a>
 
 ### **`👑 Propietario`**
 <a
