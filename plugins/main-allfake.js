@@ -100,7 +100,7 @@ global.taguser = '@' + m.sender.split("@s.whatsapp.net")
 var more = String.fromCharCode(8206)
 global.readMore = more.repeat(850)
 
-global.packsticker = `🕷️《 VenomX-Bot 》🕷️\nBy Speed3xz Team`;
+global.packsticker = `🕷️《 VenomX-Bot 》🕷️\nBy Speed3xz Team\n\n`;
 
 global.packsticker2 = `🕷️《 INFO DEL USUARIO 》🕷️\nBot: ${botname}\nUsuario: ${nombre}`;
 
