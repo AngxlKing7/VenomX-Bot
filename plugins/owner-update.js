@@ -1,45 +1,29 @@
-import { execSync } from 'child_process';
+import { exec } from 'child_process';
 
-let handler = async (m, { conn, args }) => { 
-    try { 
-        await conn.reply(m.chat, '👑 Actualizando el bot, por favor espere...', m, rcanal);
+let handler = async (m, { conn }) => {
+  m.reply(`${emoji2} Actualizando el bot...`);
 
-        const output = execSync('git pull' + (args.length ? ' ' + args.join(' ') : '')).toString();
-        let response = output.includes('Already up to date') 
-            ? '👑 El bot ya está actualizado.' 
-            : `🔥 Se han aplicado actualizaciones:\n\n${output}`;
+  exec('git pull', (err, stdout, stderr) => {
+    if (err) {
+      conn.reply(m.chat, `${msm} Error: No se pudo realizar la actualización.\nRazón: ${err.message}`, m);
+      return;
+    }
 
-        await conn.reply(m.chat, response, m, rcanal);
+    if (stderr) {
+      console.warn('Advertencia durante la actualización:', stderr);
+    }
 
-    } catch (error) { 
-        try { 
-            const status = execSync('git status --porcelain').toString().trim(); 
-            if (status) { 
-                const conflictedFiles = status.split('\n').filter(line => 
-                    !line.includes('kiritoSession/') && 
-                    !line.includes('.cache/') && 
-                    !line.includes('tmp/')
-                ); 
-
-                if (conflictedFiles.length > 0) { 
-                    const conflictMsg = `⚠️ Conflictos detectados en los siguientes archivos:\n\n` +
-                        conflictedFiles.map(f => '• ' + f.slice(3)).join('\n') +
-                        `\n\n🔹 Para solucionar esto, reinstala el bot o actualiza manualmente.`;
-
-                    return await conn.reply(m.chat, conflictMsg, m, rcanal); 
-                } 
-            } 
-        } catch (statusError) { 
-            console.error(statusError); 
-        }
-
-        await conn.reply(m.chat, `❌ Error al actualizar: ${error.message || 'Error desconocido.'}`, m, rcanal);
-    } 
+    if (stdout.includes('Already up to date.')) {
+      conn.reply(m.chat, `${emoji4} El bot ya está actualizado 👑.`, m);
+    } else {
+      conn.reply(m.chat, `${emoji} Actualización realizada con éxito.`, m);
+    }
+  });
 };
 
-handler.help = ['update', 'actualizar'];
-handler.customPrefix = /^(update|actualizar)$/i
-handler.command = new RegExp
+handler.help = ['update'];
+handler.tags = ['owner'];
+handler.command = ['update', 'actualizar'];
 handler.rowner = true;
 
 export default handler;
