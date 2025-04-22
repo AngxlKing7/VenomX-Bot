@@ -1,10 +1,17 @@
 import moment from 'moment-timezone';
 
 let handler = async (m, { conn, args }) => {
-    // Asegúrate de que el comando no esté invocando el menú cuando no se necesita
     if (args[0] && args[0].toLowerCase() === 'script') {
-        return; // Simplemente no hace nada si se ingresa '.menú script'
+        return;
     }
+
+    const imageUrls = [
+        'https://files.catbox.moe/ebr65k.jpg',
+        'https://files.catbox.moe/6hrur2.jpg',
+        'https://files.catbox.moe/vgdxmv.jpg',
+        'https://files.catbox.moe/hg6yub.jpg'
+    ];
+    let selectedImage = imageUrls[Math.floor(Math.random() * imageUrls.length)];
 
     let userId = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.sender;
     let user = global.db.data.users[userId];
@@ -13,7 +20,7 @@ let handler = async (m, { conn, args }) => {
     let uptime = clockString(_uptime);
     let totalreg = Object.keys(global.db.data.users).length;
     let totalCommands = Object.values(global.plugins).filter((v) => v.help && v.tags).length;
-    
+
     let txt = `
 Hola! Soy  *${botname}*  🜲
 Aquí tienes la lista de comandos
@@ -542,30 +549,22 @@ Crea un *Sub-Bot* con tu número utilizando *#qr* o *#code*
 ᰔᩚ *#ttt*
 > ✦ Crea una sala de juego.
   `.trim();
-  
-  const imageUrls = [
-                  'https://files.catbox.moe/ebr65k.jpg',
-'https://files.catbox.moe/6hrur2.jpg',
-'https://files.catbox.moe/vgdxmv.jpg',
-'https://files.catbox.moe/hg6yub.jpg'
-    ];
-    let selectedImage = imageUrls[Math.floor(Math.random() * imageUrls.length)];
 
-  await conn.sendMessage(m.chat, { 
-      text: txt,
-      contextInfo: {
-          mentionedJid: [m.sender, userId],
-          isForwarded: false, // Desactiva la apariencia de reenviado
-          externalAdReply: {
-              title: botname,
-              body: textbot,
-              thumbnailUrl: banner,
-              mediaType: 1,
-              showAdAttribution: true,
-              renderLargerThumbnail: true,
-          },
-      },
-  }, { quoted: m });
+    await conn.sendMessage(m.chat, { 
+        text: txt,
+        contextInfo: {
+            mentionedJid: [m.sender, userId],
+            isForwarded: false,
+            externalAdReply: {
+                title: botname,
+                body: textbot,
+                thumbnailUrl: selectedImage,
+                mediaType: 1,
+                showAdAttribution: true,
+                renderLargerThumbnail: true,
+            },
+        },
+    }, { quoted: m });
 };
 
 handler.help = ['menu'];
@@ -578,5 +577,6 @@ function clockString(ms) {
     let seconds = Math.floor((ms / 1000) % 60);
     let minutes = Math.floor((ms / (1000 * 60)) % 60);
     let hours = Math.floor((ms / (1000 * 60 * 60)) % 24);
+
     return `${hours}h ${minutes}m ${seconds}s`;
 }
